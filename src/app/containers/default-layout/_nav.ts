@@ -30,8 +30,8 @@ export const navItems: INavData[] = [
     title: true
   },
   {
-    name: 'Base',
-    url: '/base',
+    name: 'Menu 1',
+/** url: '/base',
     iconComponent: { name: 'cil-puzzle' },
     children: [
       {
@@ -94,11 +94,11 @@ export const navItems: INavData[] = [
         name: 'Tooltips',
         url: '/base/tooltips'
       }
-    ]
+    ] */
   },
   {
-    name: 'Buttons',
-    url: '/buttons',
+    name: 'Menu 2',
+/** url: '/buttons',
     iconComponent: { name: 'cil-cursor' },
     children: [
       {
@@ -113,11 +113,11 @@ export const navItems: INavData[] = [
         name: 'Dropdowns',
         url: '/buttons/dropdowns'
       },
-    ]
+    ] */
   },
   {
-    name: 'Forms',
-    url: '/forms',
+    name: 'Menu 3',
+/** url: '/forms',
     iconComponent: { name: 'cil-notes' },
     children: [
       {
@@ -152,16 +152,16 @@ export const navItems: INavData[] = [
         name: 'Validation',
         url: '/forms/validation'
       }
-    ]
+    ] */
   },
   {
-    name: 'Charts',
-    url: '/charts',
-    iconComponent: { name: 'cil-chart-pie' }
+    name: 'Menu 4',
+//  url: '/charts',
+//    iconComponent: { name: 'cil-chart-pie' }
   },
   {
-    name: 'Icons',
-    iconComponent: { name: 'cil-star' },
+    name: 'Menu 5',
+/** iconComponent: { name: 'cil-star' },
     url: '/icons',
     children: [
       {
@@ -180,32 +180,32 @@ export const navItems: INavData[] = [
         name: 'CoreUI Brands',
         url: '/icons/brands'
       }
-    ]
+    ] */
   },
   {
-    name: 'Notifications',
-    url: '/notifications',
-    iconComponent: { name: 'cil-bell' },
+    name: 'Menu 6',
+//  url: '/notifications',
+//  iconComponent: { name: 'cil-bell' },
     children: [
       {
-        name: 'Alerts',
-        url: '/notifications/alerts'
+        name: 'List 1',
+    //  url: '/notifications/alerts'
       },
       {
-        name: 'Badges',
-        url: '/notifications/badges'
+        name: 'List 2',
+    //  url: '/notifications/badges'
       },
       {
-        name: 'Modal',
-        url: '/notifications/modal'
+        name: 'List 3',
+    //  url: '/notifications/modal'
       },
       {
-        name: 'Toast',
-        url: '/notifications/toasts'
+        name: 'List 4',
+    //  url: '/notifications/toasts'
       }
     ]
   },
-  {
+/** {
     name: 'Widgets',
     url: '/widgets',
     iconComponent: { name: 'cil-calculator' },
@@ -217,27 +217,27 @@ export const navItems: INavData[] = [
   {
     title: true,
     name: 'Extras'
-  },
+  },*/
   {
     name: 'Pages',
-    url: '/login',
+//  url: '/login',
     iconComponent: { name: 'cil-star' },
     children: [
       {
         name: 'Login',
-        url: '/login'
+//      url: '/login'
       },
       {
         name: 'Register',
-        url: '/register'
+//      url: '/register'
       },
       {
         name: 'Error 404',
-        url: '/404'
+//      url: '/404'
       },
       {
         name: 'Error 500',
-        url: '/500'
+//      url: '/500'
       }
     ]
   },
