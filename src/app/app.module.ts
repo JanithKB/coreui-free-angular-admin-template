@@ -42,10 +42,12 @@ import {
   SidebarModule,
   TabsModule,
   UtilitiesModule,
+
 } from '@coreui/angular';
 
 import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { DatatableComponent } from './datatable/datatable.component';
+import { DataTablesModule } from 'angular-datatables';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -60,6 +62,7 @@ const APP_CONTAINERS = [
 @NgModule({
   declarations: [AppComponent, ...APP_CONTAINERS, DatatableComponent],
   imports: [
+    DataTablesModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
