@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { DtRoutingModule } from './dt-routing.module';
 import { DtComponent } from './dt.component';
+import { DataTablesModule } from 'angular-datatables';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { DtComponent } from './dt.component';
   ],
   imports: [
     CommonModule,
-    DtRoutingModule
+    DtRoutingModule,
+    DataTablesModule
   ]
 })
 export class DtModule { }
