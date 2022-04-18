@@ -70,6 +70,16 @@ const routes: Routes = [
         loadChildren: () =>
           import('./views/pages/pages.module').then((m) => m.PagesModule)
       },
+      {
+        path: 'data',
+        loadChildren: () =>
+          import('./views/pages/pages.module').then((m) => m.PagesModule)
+      },
+      {
+        path: 'datatables',
+        loadChildren: () =>
+          import('./dt/dt.module').then((m) => m.DtModule)
+      },
     ]
   },
   {
@@ -100,6 +110,7 @@ const routes: Routes = [
       title: 'Register Page'
     }
   },
+  { path: 'dt', loadChildren: () => import('./dt/dt.module').then(m => m.DtModule) },
   {path: '**', redirectTo: 'dashboard'}
 ];
 
