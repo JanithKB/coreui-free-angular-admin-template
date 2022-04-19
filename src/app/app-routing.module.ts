@@ -80,6 +80,10 @@ const routes: Routes = [
         loadChildren: () =>
           import('./dt/dt.module').then((m) => m.DtModule)
       },
+      { 
+        path: 'views/view-units', 
+        loadChildren: () => 
+        import('./views/view-units/view-units.module').then(m => m.ViewUnitsModule) },
     ]
   },
   {
@@ -111,6 +115,8 @@ const routes: Routes = [
     }
   },
   { path: 'dt', loadChildren: () => import('./dt/dt.module').then(m => m.DtModule) },
+  { path: 'views/add-unit', loadChildren: () => import('./views/add-unit/add-unit.module').then(m => m.AddUnitModule) },
+  
   {path: '**', redirectTo: 'dashboard'}
 ];
 
