@@ -1,0 +1,117 @@
+<c-row ngPreserveWhitespaces>
+    <c-col xs="12">
+        <c-card class="mb-4">
+            <c-card-header>
+                <strong>Payment via shroff counter</strong>
+            </c-card-header>
+            <c-card-body>
+                <form>
+                    <div [cFormFloating]="true" class="mb-2">
+                        <input cFormControl id="digit" placeholder="XXXXXXXXXXXXXXXX" type="text" />
+                        <label cLabel for="digit">16 Digit Code</label>
+                    </div>
+                    <div cFormFloating class="mb-2">
+                        <input cFormControl id="nic" placeholder="NIC" type="text" />
+                        <label cLabel for="nic">NIC</label>
+                    </div>
+                    <div cFormFloating class="mb-2">
+                        <input cFormControl id="reg" placeholder="Reg No/Payer ID" type="text" />
+                        <label cLabel for="reg">Reg No/Payer ID</label>
+                    </div>
+                    <button cButton color="primary" class="float-end">Search</button>
+                </form>
+            </c-card-body>
+        </c-card>
+    </c-col>
+    <c-col xs="12">
+        <c-card class="mb-4">
+            <c-card-header>
+                <strong>To be paid</strong>
+            </c-card-header>
+            <c-card-body>
+                <form action="" method="post">
+                    <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%" datatable [dtOptions]="dtOptions">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" name="websitecheck" (click)="checkUnCheckAll()" />
+                                </th>
+                                <th>16 Digit Code</th>
+                                <th>Payer Name</th>
+                                <th>NIC</th>
+                                <th>Amount</th>
+                                <th>Voucher type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let group of data">
+                                <td>
+                                    <input type="checkbox" name="websitecheck" [checked]="isChecked" value="{{ group.digitCode }}" />
+                                </td>
+                                <td>{{ group.digitCode }}</td>
+                                <td>{{ group.name }}</td>
+                                <td>{{ group.nic }}</td>
+                                <td>{{ group.amount }}</td>
+                                <td>{{ group.voucherType }}</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" name="websitecheck" (click)="checkUnCheckAll()" />
+                                </th>
+                                <th>16 Digit Code</th>
+                                <th>Payer Name</th>
+                                <th>NIC</th>
+                                <th>Amount</th>
+                                <th>Voucher type</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <!-- <button cButton color="primary" class="float-end">Pay</button> -->
+                    <button class="btn btn-primary float-end" (click)="confirmBox()">Pay</button>
+                </form>
+            </c-card-body>
+        </c-card>
+    </c-col>
+    <c-col xs="12">
+        <c-card class="mb-4">
+            <c-card-header>
+                <strong>Paid</strong>
+            </c-card-header>
+            <c-card-body>
+                <form action="" method="post">
+                    <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%" datatable [dtOptions]="dtOptions">
+                        <thead>
+                            <tr>
+                                <th>16 Digit Code</th>
+                                <th>Payer Name</th>
+                                <th>NIC</th>
+                                <th>Amount</th>
+                                <th>Voucher type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let group of data">
+                                <td>{{ group.digitCode }}</td>
+                                <td>{{ group.name }}</td>
+                                <td>{{ group.nic }}</td>
+                                <td>{{ group.amount }}</td>
+                                <td>{{ group.voucherType }}</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>16 Digit Code</th>
+                                <th>Payer Name</th>
+                                <th>NIC</th>
+                                <th>Amount</th>
+                                <th>Voucher type</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </form>
+            </c-card-body>
+        </c-card>
+    </c-col>
+</c-row>
