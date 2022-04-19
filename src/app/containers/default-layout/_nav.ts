@@ -10,34 +10,34 @@ export const navItems: INavData[] = [
       text: 'NEW'
     }
   },
+  // {
+  //   title: true,
+  //   name: 'Theme'
+  // },
+  // {
+  //   name: 'Colors',
+  //   url: '/theme/colors',
+  //   iconComponent: { name: 'cil-drop' }
+  // },
+  // {
+  //   name: 'DataTable',
+  //   url: '/datatables',
+  //   iconComponent: { name: 'cil-drop' }
+  // },
+  // {
+  //   name: 'Typography',
+  //   url: '/theme/typography',
+  //   linkProps: { fragment: 'someAnchor' },
+  //   iconComponent: { name: 'cil-pencil' }
+  // },
   {
-    title: true,
-    name: 'Theme'
-  },
-  {
-    name: 'Colors',
-    url: '/theme/colors',
-    iconComponent: { name: 'cil-drop' }
-  },
-  {
-    name: 'DataTable',
-    url: '/datatables',
-    iconComponent: { name: 'cil-drop' }
-  },
-  {
-    name: 'Typography',
-    url: '/theme/typography',
-    linkProps: { fragment: 'someAnchor' },
-    iconComponent: { name: 'cil-pencil' }
-  },
-  {
-    name: 'Components',
+    name: 'Modules',
     title: true
   },
   {
-    name: 'Menu 1',
-/** url: '/base',
-    iconComponent: { name: 'cil-puzzle' },
+    name: 'Finance',
+url: '/base',
+    iconComponent: { name: 'cil-chart-line' },
     children: [
       {
         name: 'Accordion',
@@ -99,7 +99,7 @@ export const navItems: INavData[] = [
         name: 'Tooltips',
         url: '/base/tooltips'
       }
-    ] */
+    ]
   },
   {
     name: 'Menu 2',
@@ -122,7 +122,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Menu 3',
-/** url: '/forms',
+ url: '/forms',
     iconComponent: { name: 'cil-notes' },
     children: [
       {
@@ -157,7 +157,7 @@ export const navItems: INavData[] = [
         name: 'Validation',
         url: '/forms/validation'
       }
-    ] */
+    ] 
   },
   {
     name: 'Menu 4',
