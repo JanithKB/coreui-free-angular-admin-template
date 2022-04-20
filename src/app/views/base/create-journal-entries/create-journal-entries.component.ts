@@ -84,5 +84,4 @@ export class CreateJournalEntriesComponent implements OnInit {
     });
   }
 
-
 }

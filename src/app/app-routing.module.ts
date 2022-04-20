@@ -91,11 +91,11 @@ const routes: Routes = [
           ),
       },
       {
-        path: 'views/viewVoucherDetails',
+        path: 'createJournalEntries',
         loadChildren: () =>
           import(
-            './views/view-voucher-details/view-voucher-details.module'
-          ).then((m) => m.ViewVoucherDetailsModule),
+            './views/base/create-journal-entries/create-journal-entries.module'
+          ).then((m) => m.CreateJournalEntriesModule),
       },
       {
         path: 'createJournalEntries',

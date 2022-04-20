@@ -6,6 +6,7 @@
             </c-card-header>
             <c-card-body>
                 <form>
+<<<<<<< HEAD
 
                     <select aria-label="Default select example" cSelect>
             <option>Income Category</option>
@@ -15,6 +16,31 @@
           </select>
 
 
+=======
+<<<<<<<< HEAD:src/app/views/view-voucher-details/view-voucher-details.component.html
+                    <div [cFormFloating]="true" class="mb-2">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input cFormControl type="text" class="form-control" placeholder="Voucher No" />
+
+                        <div class="input-group-prepend">
+                            <button class="btn btn-outline-secondary" type="button">
+                Download
+              </button>
+                        </div>
+                    </div>
+========
+                    <app-docs-example href="forms/select">
+                        <select aria-label="Default select example" cSelect>
+              <option>Income Category</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+                    </app-docs-example>
+                    <button cButton color="primary" class="float-end">Search</button>
+>>>>>>>> a008aa0fb7de0dac4aee3f125a74c95675413b09:src/app/views/base/create-journal-entries/create-journal-entries.component.html
+>>>>>>> a008aa0fb7de0dac4aee3f125a74c95675413b09
                 </form>
             </c-card-body>
         </c-card>
@@ -33,8 +59,19 @@
                                     <input type="checkbox" name="websitecheck" (click)="checkUnCheckAll()" />
                                 </th>
                                 <th>16 Digit Code</th>
+<<<<<<< HEAD
                                 <th>Amount</th>
                                 <th>Date</th>
+=======
+<<<<<<<< HEAD:src/app/views/view-voucher-details/view-voucher-details.component.html
+                                <th>Payer Name</th>
+                                <th>Amount</th>
+                                <th>Due date</th>
+========
+                                <th>Amount</th>
+                                <th>Date</th>
+>>>>>>>> a008aa0fb7de0dac4aee3f125a74c95675413b09:src/app/views/base/create-journal-entries/create-journal-entries.component.html
+>>>>>>> a008aa0fb7de0dac4aee3f125a74c95675413b09
                             </tr>
                         </thead>
                         <tbody>
@@ -43,15 +80,44 @@
                                     <input type="checkbox" name="websitecheck" [checked]="isChecked" value="{{ group.digitCode }}" />
                                 </td>
                                 <td>{{ group.digitCode }}</td>
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:src/app/views/view-voucher-details/view-voucher-details.component.html
+                                <td>{{ group.name }}</td>
+========
+>>>>>>>> a008aa0fb7de0dac4aee3f125a74c95675413b09:src/app/views/base/create-journal-entries/create-journal-entries.component.html
+>>>>>>> a008aa0fb7de0dac4aee3f125a74c95675413b09
                                 <td>{{ group.amount }}</td>
                                 <td>{{ group.date }}</td>
                             </tr>
                         </tbody>
+<<<<<<< HEAD
                     </table>
                     <!-- <button cButton color="primary" class="float-end">Pay</button> -->
                     <button class="btn btn-primary float-end" (click)="confirmBox()">
           Generate journal entries
         </button>
+=======
+<<<<<<<< HEAD:src/app/views/view-voucher-details/view-voucher-details.component.html
+                        <tfoot>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" name="websitecheck" (click)="checkUnCheckAll()" />
+                                </th>
+                                <th>16 Digit Code</th>
+                                <th>Payer Name</th>
+                                <th>Amount</th>
+                                <th>Due date</th>
+                            </tr>
+                        </tfoot>
+========
+>>>>>>>> a008aa0fb7de0dac4aee3f125a74c95675413b09:src/app/views/base/create-journal-entries/create-journal-entries.component.html
+                    </table>
+                    <!-- <button cButton color="primary" class="float-end">Pay</button> -->
+                    <button class="btn btn-primary float-end" (click)="confirmBox()">
+            Generate journal entries
+          </button>
+>>>>>>> a008aa0fb7de0dac4aee3f125a74c95675413b09
                 </form>
             </c-card-body>
         </c-card>
@@ -68,16 +134,24 @@
                             <tr>
                                 <th>16 Digit Code</th>
                                 <th>Payer Name</th>
+<<<<<<< HEAD
                                 <th>NIC</th>
                                 <th>Amount</th>
                                 <th>Voucher type</th>
+=======
+                                <th>Amount</th>
+                                <th>Due date</th>
+>>>>>>> a008aa0fb7de0dac4aee3f125a74c95675413b09
                             </tr>
                         </thead>
                         <tbody>
                             <tr *ngFor="let group of data">
                                 <td>{{ group.digitCode }}</td>
                                 <td>{{ group.name }}</td>
+<<<<<<< HEAD
                                 <td>{{ group.nic }}</td>
+=======
+>>>>>>> a008aa0fb7de0dac4aee3f125a74c95675413b09
                                 <td>{{ group.amount }}</td>
                                 <td>{{ group.date }}</td>
                             </tr>
@@ -86,9 +160,14 @@
                             <tr>
                                 <th>16 Digit Code</th>
                                 <th>Payer Name</th>
+<<<<<<< HEAD
                                 <th>NIC</th>
                                 <th>Amount</th>
                                 <th>Voucher type</th>
+=======
+                                <th>Amount</th>
+                                <th>Due date</th>
+>>>>>>> a008aa0fb7de0dac4aee3f125a74c95675413b09
                             </tr>
                         </tfoot>
                     </table>

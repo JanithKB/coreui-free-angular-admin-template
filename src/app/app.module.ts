@@ -50,6 +50,8 @@ import {
 import { IconModule, IconSetService } from '@coreui/icons-angular';
 import { DatatableComponent } from './datatable/datatable.component';
 import { DataTablesModule } from 'angular-datatables';
+//import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -91,6 +93,8 @@ const APP_CONTAINERS = [
     BadgeModule,
     ListGroupModule,
     CardModule,
+    //BsDatepickerModule.forRoot(),
+   // NgbModule,
   ],
   providers: [
     {
