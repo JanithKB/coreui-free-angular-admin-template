@@ -127,8 +127,10 @@ const routes: Routes = [
       title: 'Register Page',
     },
   },
-
-  { path: '**', redirectTo: 'dashboard' },
+  { path: 'dt', loadChildren: () => import('./dt/dt.module').then(m => m.DtModule) },
+  { path: 'views/add-unit', loadChildren: () => import('./views/add-unit/add-unit.module').then(m => m.AddUnitModule) },
+  
+  {path: '**', redirectTo: 'dashboard'}
 ];
 
 @NgModule({
