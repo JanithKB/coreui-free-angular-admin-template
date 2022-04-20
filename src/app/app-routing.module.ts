@@ -97,6 +97,13 @@ const routes: Routes = [
             './views/view-voucher-details/view-voucher-details.module'
           ).then((m) => m.ViewVoucherDetailsModule),
       },
+      {
+        path: 'createJournalEntries',
+        loadChildren: () =>
+          import(
+            './views/base/create-journal-entries/create-journal-entries.module'
+          ).then((m) => m.CreateJournalEntriesModule),
+      },
     ],
   },
   {
@@ -127,10 +134,17 @@ const routes: Routes = [
       title: 'Register Page',
     },
   },
-  { path: 'dt', loadChildren: () => import('./dt/dt.module').then(m => m.DtModule) },
-  { path: 'views/add-unit', loadChildren: () => import('./views/add-unit/add-unit.module').then(m => m.AddUnitModule) },
-  
-  {path: '**', redirectTo: 'dashboard'}
+  {
+    path: 'dt',
+    loadChildren: () => import('./dt/dt.module').then((m) => m.DtModule),
+  },
+  {
+    path: 'views/add-unit',
+    loadChildren: () =>
+      import('./views/add-unit/add-unit.module').then((m) => m.AddUnitModule),
+  },
+
+  { path: '**', redirectTo: 'dashboard' },
 ];
 
 @NgModule({
