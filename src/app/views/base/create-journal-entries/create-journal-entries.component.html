@@ -2,24 +2,19 @@
     <c-col xs="12">
         <c-card class="mb-4">
             <c-card-header>
-                <strong>Payment via shroff counter</strong>
+                <strong>Create Journal entries</strong>
             </c-card-header>
             <c-card-body>
                 <form>
-                    <div [cFormFloating]="true" class="mb-2">
-                        <input id="digit" placeholder="XXXXXXXXXXXXXXXX" type="text" />
-
-                        <button cButton color="primary" class="float-end"></button>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input cFormControl type="text" class="form-control" />
-                        <label cLabel for="digit">Voucher No</label>
-                        <div class="input-group-prepend">
-                            <button class="btn btn-outline-secondary" type="button">
-                Download
-              </button>
-                        </div>
-                    </div>
+                    <app-docs-example href="forms/select">
+                        <select aria-label="Default select example" cSelect>
+              <option>Income Category</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+                    </app-docs-example>
+                    <button cButton color="primary" class="float-end">Search</button>
                 </form>
             </c-card-body>
         </c-card>
@@ -27,7 +22,7 @@
     <c-col xs="12">
         <c-card class="mb-4">
             <c-card-header>
-                <strong>To be paid</strong>
+                <strong></strong>
             </c-card-header>
             <c-card-body>
                 <form action="" method="post">
@@ -38,10 +33,8 @@
                                     <input type="checkbox" name="websitecheck" (click)="checkUnCheckAll()" />
                                 </th>
                                 <th>16 Digit Code</th>
-                                <th>Payer Name</th>
-                                <th>NIC</th>
                                 <th>Amount</th>
-                                <th>Voucher type</th>
+                                <th>Date</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -50,28 +43,14 @@
                                     <input type="checkbox" name="websitecheck" [checked]="isChecked" value="{{ group.digitCode }}" />
                                 </td>
                                 <td>{{ group.digitCode }}</td>
-                                <td>{{ group.name }}</td>
-                                <td>{{ group.nic }}</td>
                                 <td>{{ group.amount }}</td>
-                                <td>{{ group.voucherType }}</td>
+                                <td>{{ group.date }}</td>
                             </tr>
                         </tbody>
-                        <tfoot>
-                            <tr>
-                                <th>
-                                    <input type="checkbox" name="websitecheck" (click)="checkUnCheckAll()" />
-                                </th>
-                                <th>16 Digit Code</th>
-                                <th>Payer Name</th>
-                                <th>NIC</th>
-                                <th>Amount</th>
-                                <th>Voucher type</th>
-                            </tr>
-                        </tfoot>
                     </table>
                     <!-- <button cButton color="primary" class="float-end">Pay</button> -->
                     <button class="btn btn-primary float-end" (click)="confirmBox()">
-            Pay
+            Generate journal entries
           </button>
                 </form>
             </c-card-body>
@@ -100,7 +79,7 @@
                                 <td>{{ group.name }}</td>
                                 <td>{{ group.nic }}</td>
                                 <td>{{ group.amount }}</td>
-                                <td>{{ group.voucherType }}</td>
+                                <td>{{ group.date }}</td>
                             </tr>
                         </tbody>
                         <tfoot>

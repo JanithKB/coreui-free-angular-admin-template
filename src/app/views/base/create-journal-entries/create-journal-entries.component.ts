@@ -2,53 +2,64 @@ import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-view-voucher-details',
-  templateUrl: './view-voucher-details.component.html',
-  styleUrls: ['./view-voucher-details.component.scss']
+  selector: 'app-create-journal-entries',
+  templateUrl: './create-journal-entries.component.html',
+  styleUrls: ['./create-journal-entries.component.scss']
 })
-export class ViewVoucherDetailsComponent implements OnInit {
-  dtOptions: DataTables.Settings = {};
-  isChecked = false;
+export class CreateJournalEntriesComponent implements OnInit {
+
   public data = [
     {
       digitCode: '23452563426',
       name: 'UOFHAoi OPIFJiop',
       nic: '23542562346V',
       amount: '498968',
-      voucherType: 'XX',
+      date: '2022-02-22',
     },
     {
       digitCode: '23452563426',
       name: 'UOFHAoi OPIFJiop',
       nic: '23542562346V',
       amount: '498968',
-      voucherType: 'XX',
+      date: '2022-02-22',
     },
     {
       digitCode: '23452563426',
       name: 'UOFHAoi OPIFJiop',
       nic: '23542562346V',
       amount: '498968',
-      voucherType: 'XX',
+      date: '2022-02-22',
     },
     {
       digitCode: '23452563426',
       name: 'UOFHAoi OPIFJiop',
       nic: '23542562346V',
       amount: '498968',
-      voucherType: 'XX',
+      date: '2022-02-22',
     },
   ];
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  dtOptions: DataTables.Settings = {};
+  isChecked = false;
+  constructor() {}
   public checkUnCheckAll() {
     if (this.isChecked == true) {
       this.isChecked = false;
     } else {
       this.isChecked = true;
     }
+  }
+  calcSelectedTotalAmount() {}
+  ngOnInit(): void {
+    this.dtOptions = {
+      pagingType: 'full_numbers',
+      searching: false,
+      pageLength: 5,
+      lengthMenu: [
+        [5, 10, 20, -1],
+        [5, 10, 20, 'All'],
+      ],
+      processing: true,
+    };
   }
   confirmBox() {
     Swal.fire({
@@ -72,5 +83,6 @@ export class ViewVoucherDetailsComponent implements OnInit {
       }
     });
   }
+  
 
 }

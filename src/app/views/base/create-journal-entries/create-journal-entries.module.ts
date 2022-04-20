@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ViewVoucherDetailsRoutingModule } from './view-voucher-details-routing.module';
-import { ViewVoucherDetailsComponent } from './view-voucher-details.component';
-import { PayShroffCounterRoutingModule } from '../pay-shroff-counter/pay-shroff-counter-routing.module';
+import { CreateJournalEntriesRoutingModule } from './create-journal-entries-routing.module';
+import { CreateJournalEntriesComponent } from './create-journal-entries.component';
 import { DocsComponentsModule } from '@docs-components/docs-components.module';
 import { ButtonGroupModule, ButtonModule, CardModule, DropdownModule, FormModule, GridModule, ListGroupModule, SharedModule } from '@coreui/angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -12,13 +11,11 @@ import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
   declarations: [
-    ViewVoucherDetailsComponent
+    CreateJournalEntriesComponent
   ],
   imports: [
     CommonModule,
-    ViewVoucherDetailsRoutingModule,
-    CommonModule,
-    PayShroffCounterRoutingModule,
+    CreateJournalEntriesRoutingModule,
     DocsComponentsModule,
     CardModule,
     FormModule,
@@ -32,7 +29,7 @@ import { DataTablesModule } from 'angular-datatables';
     DropdownModule,
     SharedModule,
     ListGroupModule,
-    DataTablesModule
+    DataTablesModule,
   ]
 })
-export class ViewVoucherDetailsModule { }
+export class CreateJournalEntriesModule { }
